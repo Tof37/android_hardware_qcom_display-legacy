@@ -98,7 +98,7 @@ IAllocController* IAllocController::getInstance(bool useMasterHeap)
 }
 
 
-#ifdef USE_ION
+/*#ifdef USE_ION
 //-------------- IonController-----------------------//
 IonController::IonController()
 {
@@ -176,7 +176,7 @@ IMemAlloc* IonController::getAllocator(int flags)
 
     return memalloc;
 }
-#else
+#else*/
 //-------------- PmemKernelController-----------------------//
 PmemKernelController::PmemKernelController()
 {
@@ -317,7 +317,7 @@ IMemAlloc* PmemAshmemController::getAllocator(int flags)
 
     return memalloc;
 }
-#endif
+//#endif
 
 size_t getBufferSizeAndDimensions(int width, int height, int format,
                                   int& alignedw, int &alignedh)
